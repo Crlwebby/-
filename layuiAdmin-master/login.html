@@ -20,8 +20,8 @@
 </head>
 <body>
 <div class="login-div">
-    <h1>登录</h1>
-    <form id="login-form" action="#">
+    <h1>管理员登录</h1>
+    <form id="login-form" methon="post" action="login.php">
         <div class="login-form-item">
             <input name="username" placeholder="用户名">
         </div>
@@ -33,18 +33,3 @@
 </div>
 </body>
 </html>
-<script src="js/jquery.min.js"></script>
-<script src="layui/layui.all.js"></script>
-<script src="js/common.js"></script>
-<script>
-
-    layuiModules=['layer','form'];
-
-    function mounted(){
-        $('#login-form').submit(function () {
-            location.href="index.html";
-            return false;
-        })
-    }
-
-</script>
