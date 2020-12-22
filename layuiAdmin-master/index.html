@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <title>layuiAdmin</title>
+    <script src="js/common.js"></script>
 </head>
 <body>
 <!--上方标题栏-->
+
 <div class="parentTop">
     <a class="appName">宾馆管理系统后台</a>
-    <div class="loginNameDiv">
+    <div class="loginNameDiv" onclick="unfold()">
         <img class="loginIcon" src="image/icon.png">
         <div class="loginUserInfo">
             <span>ice</span><br>
@@ -22,46 +24,44 @@
 
 <!--左侧菜单-->
 <div class="leftMenu">
-    <ul class="layui-nav layui-nav-tree"
-        lay-filter="test">
+    <!--<ul style="list-style-type:None">-->
+    <ul style="list-style-type:None;padding:0px">
+        <li class="link"><a href="123.txt" target="iframe">入住登记</a></li>
+        <li class="link"><a href=# target="iframe">客户管理</a></li>
+        <li class="link"><a href=# target="iframe">客房管理</a></li>
+        <li class="link"><a href=# target="iframe">流水统计</a></li>
     </ul>
 </div>
 <!--主要内容区-->
 <div class="parentMain">
-    <iframe id="iframeParent"></iframe>
+    <iframe id="iframeParent" name="iframe"></iframe>
 </div>
 
 <!--设置弹框-->
+<!--修改密码弹框-->
 <div class="dialogMenu">
     <div id="parentChangePassword" class="dialogMenu-item">修改密码</div>
     <div id="parentExit" class="dialogMenu-item">退出</div>
 </div>
+<form class="alter_password_form" id="dialogChangePasswordForm" style="margin-top:30px;padding-right:30px;">
+    <div class="form">
+        <label>原密码</label>
+        <div class="block">
+            <input type="password" name="password" placeholder="请输入原密码">
+        </div>
+    </div>
+    <div class="form">
+        <label>新密码</label>
+        <div class="block">
+            <input type="password" name="newPassword" placeholder="请输入新密码">
+        </div>
+    </div>
+    <div class="form">
+        <label>确认密码</label>
+        <div class="block">
+            <input type="password" name="okPassword" placeholder="请重复输入密码">
+        </div>
+    </div>
+</form>
 </body>
 </html>
-<!--修改密码弹框-->
-<script type="text/html" id="dialogChangePassword">
-    <form class="layui-form" id="dialogChangePasswordForm" style="margin-top:30px;padding-right:30px;">
-        <div class="layui-form-item">
-            <label class="layui-form-label">原密码</label>
-            <div class="layui-input-block">
-                <input type="password" name="password"
-                       placeholder="请输入原密码" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">新密码</label>
-            <div class="layui-input-block">
-                <input type="password" name="newPassword"
-                       placeholder="请输入新密码" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">确认密码</label>
-            <div class="layui-input-block">
-                <input type="password" name="okPassword"
-                       placeholder="请重复输入密码" class="layui-input">
-            </div>
-        </div>
-    </form>
-</script>
-

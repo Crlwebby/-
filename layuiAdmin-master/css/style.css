@@ -47,6 +47,24 @@
     background-color: #393D49;
 }
 
+.leftMenu a{
+    color:#FFFFFFB3;
+    text-decoration:none;
+    display:block;
+    padding:10px 80px 10px 20px;
+}
+
+.leftMenu li{
+    color:#FFFFFFB3;
+    margin-left: 0px;
+    font-size: 18px;
+    width:200px;
+    height:50px;
+}
+
+.leftMenu .link:hover{
+    background-color:rgba(255, 255, 255, 0.1);
+}
 .dialogMenu{
     width: 130px;
     position: absolute;
@@ -79,100 +97,8 @@
     height: 98%;
     border-width:0;
 }
-
-.topGrid{
-    font-size: 0;
-}
-
-.topGrid .itemWrapper{
-    width: 25%;
-    display: inline-block;
-}
-
-.topGrid .item{
-    color: white;
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 6px;
-    margin-right: 10px;
-}
-
-.topGrid .item .name{
-    margin-bottom: 10px;
-}
-
-.topGrid .item .number{
-    font-size: 30px;
-}
-
-.topGrid .itemWrapper:nth-child(1) .item{
-    background-color: #1BC98E;
-}
-
-.topGrid .itemWrapper:nth-child(2) .item{
-    background-color: #E64758;
-}
-
-.topGrid .itemWrapper:nth-child(3) .item{
-    background-color: #9F85FF;
-}
-
-.topGrid .itemWrapper:nth-child(4) .item{
-    background-color: #E5D936;
-}
-
 #mountNode{
     margin-top: 20px;
-}
-
-.upload-image-list{
-    display: flex;
-    padding: 15px;
-    flex-wrap: wrap;
-}
-
-.upload-image-list .item{
-    margin-right: 8px;
-    margin-bottom: 8px;
-    position: relative;
-}
-
-.upload-image-list .delItem{
-    margin-right: 8px;
-    position: relative;
-    display: none;
-}
-
-.upload-image-list .item .image{
-    width: 100px;
-    height: 100px;
-}
-
-.upload-image-list .item .delete{
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-}
-
-.upload-image-list .addDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #cccccc;
-    width: 100px;
-    height: 100px;
-}
-
-.upload-image-list .addDiv img{
-    display: flex;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    justify-content: center;
 }
 
 .login-div{
