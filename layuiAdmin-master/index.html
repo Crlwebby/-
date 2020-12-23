@@ -40,28 +40,35 @@
 <!--设置弹框-->
 <!--修改密码弹框-->
 <div class="dialogMenu">
-    <div id="parentChangePassword" class="dialogMenu-item">修改密码</div>
+    <div id="parentChangePassword" class="dialogMenu-item" onclick="changePassword()">修改密码</div>
     <div id="parentExit" class="dialogMenu-item">退出</div>
 </div>
-<form class="alter_password_form" id="dialogChangePasswordForm" style="margin-top:30px;padding-right:30px;">
-    <div class="form">
-        <label>原密码</label>
-        <div class="block">
-            <input type="password" name="password" placeholder="请输入原密码">
-        </div>
+<div class="content" id="ChangPasswordDIV">
+    <div class="incontent" id="passwdheader"></div>
+    <div class="incontent">
+        <form class="alter_password_form" id="dialogChangePasswordForm" action="ChangePassWord.php" method="POST">
+            <div class="form">
+                <label>原密码</label>
+                <div class="block">
+                    <input type="password" name="password" placeholder="请输入原密码">
+                </div>
+            </div>
+            <div class="form">
+                <label>新密码</label>
+                <div class="block">
+                    <input type="password" name="newPassword" placeholder="请输入新密码">
+                </div>
+            </div>
+            <div class="form">
+                <label>确认密码</label>
+                <div class="block">
+                    <input type="password" name="okPassword" placeholder="请重复输入密码">
+                </div>
+            </div>
+            <input type="submit" value="确认"><input type="button" value="取消" onclick="(function(){document.getElementById('ChangPasswordDIV').style.display='none'})()">
+        </form>
     </div>
-    <div class="form">
-        <label>新密码</label>
-        <div class="block">
-            <input type="password" name="newPassword" placeholder="请输入新密码">
-        </div>
-    </div>
-    <div class="form">
-        <label>确认密码</label>
-        <div class="block">
-            <input type="password" name="okPassword" placeholder="请重复输入密码">
-        </div>
-    </div>
-</form>
+    <div class="incontent" id="passwordfooter"></div>
+</div>
 </body>
 </html>

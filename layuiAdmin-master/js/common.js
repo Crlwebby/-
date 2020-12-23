@@ -1,10 +1,10 @@
 function unfold(){
     var temp=document.getElementsByClassName("dialogMenu")[0];
-    if(temp.style.display == "block"){
-        temp.style.display = "none";
-    }
-    else{
-        temp.style.display = "block";
-    }
+    temp.style.display=temp.style.display =="block"?"none":"block";
     //document.getElementsByClassName("dialogMenu").visibility="visible";
+}
+//获取弹窗
+function changePassword(){
+    var modal = document.getElementById('ChangPasswordDIV');
+    modal.style.display="block";
 }
