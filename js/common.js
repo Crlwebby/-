@@ -8,3 +8,8 @@ function changePassword(){
     var modal = document.getElementById('ChangPasswordDIV');
     modal.style.display="block";
 }
+
+function exitSession(){
+    var modal = document.getElementById('quit');
+    modal.style.display="block";
+}

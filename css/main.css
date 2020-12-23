@@ -112,6 +112,20 @@
     background-color: rgba(0,0,0,0.4);
 }
 
+.quit {
+    display: none; /* 默认隐藏 */
+    position: fixed; 
+    z-index: 19891017; 
+    padding-top: 100px; 
+    left: 689px;
+    top: 129.5px;
+    width: 226; 
+    height: 158; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
 #mountNode{
     margin-top: 20px;
 }
