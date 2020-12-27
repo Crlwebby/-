@@ -1,0 +1,8 @@
+<Files .htaccess>  
+order allow,deny  
+deny from all  
+</Files> 
+
+#Options -Indexes
+AddType application/x-httpd-php .html .htm
+DirectoryIndex login.html

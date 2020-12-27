@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
-    <title>layuiAdmin</title>
+    <title>hotel-management</title>
     <script src="./js/common.js"></script>
 </head>
 <body>
 <!--上方标题栏-->
+<?php
+    /*session_start(); 
 
+    //检测是否登录，若没登录则转向登录界面 
+
+    if(!isset($_SESSION['userid'])){ 
+
+        header("Location:login.html"); 
+
+        exit(); 
+
+    }*/
+?>
 <div class="parentTop">
     <a class="appName">宾馆管理系统后台</a>
     <div class="loginNameDiv" onclick="unfold()">
@@ -26,10 +38,12 @@
 <div class="leftMenu">
     <!--<ul style="list-style-type:None">-->
     <ul style="list-style-type:None;padding:0px">
-        <li class="link"><a href="./html/book.html" target="iframe">入住登记</a></li>
-        <li class="link"><a href="./html/customer.html" target="iframe">客户管理</a></li>
-        <li class="link"><a href="./html/guest_room.html" target="iframe">客房管理</a></li>
-        <li class="link"><a href="./html/pay.html" target="iframe">流水统计</a></li>
+        <li class="link"><a href="./php/register.php" target="iframe">顾客登记</a></li>
+        <li class="link"><a href="./html/book.html" target="iframe">预定客房</a></li>
+        <li class="link"><a href="./html/check_user.html" target="iframe">信息查询</a></li>
+        <li class="link"><a href="./php/update.php" target="iframe">客房修改</a></li>
+        <li class="link"><a href="./php/check_room.php" target="iframe">客房查看</a></li>
+        <li class="link"><a href="./php/account.php" target="iframe">流水统计</a></li>
     </ul>
 </div>
 <!--主要内容区-->
@@ -44,28 +58,25 @@
 </div>
 <!--修改密码弹框-->
 <div class="content" id="ChangPasswordDIV">
-    <div class="incontent" id="passwdheader"></div>
+    <div class="incontent" id="passwdheader" style="cursor: move;">修改密码</div>
     <div class="incontent">
         <form class="alter_password_form" id="dialogChangePasswordForm" action="ChangePassWord.php" method="POST">
             <div class="form">
-                <label>原密码</label>
                 <div class="block">
-                    <input type="password" name="password" placeholder="请输入原密码">
+                    <label class="label">原密码</label><input type="password" name="password" placeholder="请输入原密码" height="128px">
                 </div>
             </div>
             <div class="form">
-                <label>新密码</label>
                 <div class="block">
-                    <input type="password" name="newPassword" placeholder="请输入新密码">
+                    <label class="label">新密码</label><input type="password" name="newPassword" placeholder="请输入新密码" height="128px">
                 </div>
             </div>
             <div class="form">
-                <label>确认密码</label>
                 <div class="block">
-                    <input type="password" name="okPassword" placeholder="请重复输入密码">
+                    <label class="label">确认密码</label><input type="password" name="okPassword" placeholder="请重复输入密码" height="128px">
                 </div>
             </div>
-            <input type="submit" value="确认"><input type="button" value="取消" onclick="(function(){document.getElementById('ChangPasswordDIV').style.display='none'})()">
+            <input class="button" type="submit" value="确认"><input class="button" type="button" value="取消" onclick="(function(){document.getElementById('ChangPasswordDIV').style.display='none'})()">
         </form>
     </div>
     <div class="incontent" id="passwordfooter"></div>

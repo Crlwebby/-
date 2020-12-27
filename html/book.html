@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--预订客房的页面-->
-        <link rel="stylesheet" href="css/book.css">
-    </head>
-    <body>
-        
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body class="add_news_body">
+<!--添加客户入住信息-->
+<div class="add_news">
+    <div class="clearfix admin_con_top">
+        <h2 class="fl">添加客户入住信息</h2>
+    </div>
+    <div class="add_news_box">
+        <form id="form1" name="form1" method="post" action="./php/book.php">
+            <ul>
+                <li>
+                    <span class="user">房间号：</span>
+                    <input name='number' type='text' id='number' autocomplete="off" value='' placeholder="请输入房间号"/>&nbsp;*
+                    <input type='text' style='display:none'> <!-- 针对firefox -->
+                </li>
+                <li>
+                    <span class="password">客户姓名：</span>
+                    <input name='name' type='text' id='name' autocomplete="off" value='' placeholder="请输入客户姓名"/>&nbsp;*
+                    <input type='text' style='display:none'> <!-- 针对firefox -->
+                </li>
+                <li>
+                    <span class="password">身份证号：</span>
+                    <input name='card' type='text' id='card' autocomplete="off" value='' placeholder="请输入身份证号"/>&nbsp;*
+                    <input type='text' style='display:none'> <!-- 针对firefox -->
+                </li>
+                <li>
+                    <span class="password">入住时间：</span>
+                    <input name='time' type='text' id="time" autocomplete="off" value='' placeholder="请选择入住时间"/>&nbsp;*
+                    <input type='text' style='display:none'> <!-- 针对firefox -->
+                </li>
+
+            </ul>
+            <div class="bottom_box">
+                <input type="submit" name="Submit" value="添加" >
+                <input type="reset" name="Submit2" value="重置"/>
+                <input type="hidden" name="addnew" value="1" />
+            </div>
+        </form>
+    </div>
+</div>
+</body>
 </html>
