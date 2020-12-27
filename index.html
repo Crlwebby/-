@@ -48,19 +48,19 @@
 </div>
 <!--主要内容区-->
 <div class="parentMain">
-    <iframe id="iframeParent" name="iframe"></iframe>
+    <iframe name="iframe"></iframe>
 </div>
 
 <!--设置弹框-->
 <div class="dialogMenu">
-    <div id="parentChangePassword" class="dialogMenu-item" onclick="changePassword()">修改密码</div>
-    <div id="parentExit" class="dialogMenu-item" onclick="exitSession()">退出</div>
+    <div class="dialogMenu-item" onclick="changePassword()">修改密码</div>
+    <div class="dialogMenu-item" onclick="exitSession()">退出</div>
 </div>
 <!--修改密码弹框-->
 <div class="content" id="ChangPasswordDIV">
     <div class="incontent" id="passwdheader" style="cursor: move;">修改密码</div>
     <div class="incontent">
-        <form class="alter_password_form" id="dialogChangePasswordForm" action="ChangePassWord.php" method="POST">
+        <form id="dialogChangePasswordForm" action="ChangePassWord.php" method="POST">
             <div class="form">
                 <div class="block">
                     <label class="label">原密码</label><input type="password" name="password" placeholder="请输入原密码" height="128px">
@@ -79,7 +79,6 @@
             <input class="button" type="submit" value="确认"><input class="button" type="button" value="取消" onclick="(function(){document.getElementById('ChangPasswordDIV').style.display='none'})()">
         </form>
     </div>
-    <div class="incontent" id="passwordfooter"></div>
 </div>
 <div class="quit" id="quit">
     <div  style="cursor: move;">信息</div>

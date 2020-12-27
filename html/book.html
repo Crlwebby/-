@@ -1,45 +1,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/page.css">
+    <style>
+        .font{
+            width: 110px;
+        }
+    </style>
 </head>
-<body class="add_news_body">
+<body>
 <!--添加客户入住信息-->
-<div class="add_news">
-    <div class="clearfix admin_con_top">
-        <h2 class="fl">添加客户入住信息</h2>
-    </div>
-    <div class="add_news_box">
-        <form id="form1" name="form1" method="post" action="./php/book.php">
-            <ul>
-                <li>
-                    <span class="user">房间号：</span>
-                    <input name='number' type='text' id='number' autocomplete="off" value='' placeholder="请输入房间号"/>&nbsp;*
-                    <input type='text' style='display:none'> <!-- 针对firefox -->
-                </li>
-                <li>
-                    <span class="password">客户姓名：</span>
-                    <input name='name' type='text' id='name' autocomplete="off" value='' placeholder="请输入客户姓名"/>&nbsp;*
-                    <input type='text' style='display:none'> <!-- 针对firefox -->
-                </li>
-                <li>
-                    <span class="password">身份证号：</span>
-                    <input name='card' type='text' id='card' autocomplete="off" value='' placeholder="请输入身份证号"/>&nbsp;*
-                    <input type='text' style='display:none'> <!-- 针对firefox -->
-                </li>
-                <li>
-                    <span class="password">入住时间：</span>
-                    <input name='time' type='text' id="time" autocomplete="off" value='' placeholder="请选择入住时间"/>&nbsp;*
-                    <input type='text' style='display:none'> <!-- 针对firefox -->
-                </li>
-
-            </ul>
-            <div class="bottom_box">
-                <input type="submit" name="Submit" value="添加" >
-                <input type="reset" name="Submit2" value="重置"/>
-                <input type="hidden" name="addnew" value="1" />
+    <h1 class="title">添加客户入住信息</h1>
+    <form name="form1" method="post" action="../php/book.php">
+            <div>
+                <label class="font">房间号：</label>
+                <input name='number' type='text' autocomplete="off" value='' placeholder="请输入房间号"/>
+                <input type='text' style='display:none'> <!-- 针对firefox -->
             </div>
-        </form>
-    </div>
-</div>
+            <div>
+                <label class="font">客户姓名：</label>
+                <input name='name' type='text' autocomplete="off" value='' placeholder="请输入客户姓名"/>
+                <input type='text' style='display:none'> <!-- 针对firefox -->
+            </div>
+            <div>
+                <label class="font">身份证号：</label>
+                <input name='card' type='text' autocomplete="off" value='' placeholder="请输入身份证号"/>
+                <input type='text' style='display:none'> <!-- 针对firefox -->
+            </div>
+            <div>
+                <label class="font">入住时间：</label>
+                <input name='time' type='text' autocomplete="off" value='' placeholder="请选择入住时间"/>
+                <input type='text' style='display:none'> <!-- 针对firefox -->
+            </div>
+        <div class="button">
+            <input type="submit" name="Submit" value="添加" >
+            <input type="reset" name="Submit2" value="重置"/>
+            <input type="hidden" name="addnew" value="1" />
+        </div>
+    </form>
 </body>
 </html>

@@ -13,3 +13,8 @@ function exitSession(){
     var modal = document.getElementById('quit');
     modal.style.display="block";
 }
+
+function information(){
+    var modal = document.getElementById('information');
+    modal.style.display="block";
+}

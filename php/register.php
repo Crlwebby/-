@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/page.css">
 </head>
 <body>
+<h1 class="title">顾客登记</h1>
 <?php
     $idErr = "";$nameErr ="";$sexErr="";$telephoneErr="";
     $employeeidErr="";
@@ -95,31 +96,31 @@
 
 <header>
 <div id="sinsert">
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-    <div class="block">
-        <label class="font">身份证号:</label><input type="text" name="id">
-        <span class="error" style="color:brown"><?php echo $idErr;?></span>
-    </div>
-    <div class="block">
-        <label class="font">姓名:</label><input type="text" name="name">
-        <span class="error" style="color:brown"><?php echo $nameErr;?></span>
-    </div>
-    <div class="block">
-        <label class="font">性别:</label><input type="text" name="sex">
-        <span class="error" style="color:brown"><?php echo $sexErr;?></span>
-    </div>
-    <div class="block">
-        <label class="font">电话号码: </label><input type="text" name="telephone">
-        <span class="error" style="color:brown"><?php echo $telephoneErr;?></span>
-    </div>
-    <div class="block">
-        <label class="font">服务的员工编号: </label><input type="text" name="employeeid">
-        <span class="error" style="color:brown"><?php echo $employeeidErr;?></span>
-    </div>
-    <div class="block">
-    <input type="submit" name="submit" value="Insert" style="width: 100px;margin-left:20px"> 
-    </div>
-</form>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+        <div>
+            <label class="font">身份证号:</label><input type="text" name="id">
+            <span class="error" style="color:brown"><?php echo $idErr;?></span>
+        </div>
+        <div>
+            <label class="font">姓名:</label><input type="text" name="name">
+            <span class="error" style="color:brown"><?php echo $nameErr;?></span>
+        </div>
+        <div>
+            <label class="font">性别:</label><input type="text" name="sex">
+            <span class="error" style="color:brown"><?php echo $sexErr;?></span>
+        </div>
+        <div>
+            <label class="font">电话号码: </label><input type="text" name="telephone">
+            <span class="error" style="color:brown"><?php echo $telephoneErr;?></span>
+        </div>
+        <div>
+            <label class="font">服务的员工编号: </label><input type="text" name="employeeid">
+            <span class="error" style="color:brown"><?php echo $employeeidErr;?></span>
+        </div>
+        <div class="button">
+            <input type="submit" name="submit" value="Insert"> 
+        </div>
+    </form>
 </div>
 </header>
 </body>

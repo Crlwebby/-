@@ -11,6 +11,7 @@
 	<title>Book Management System For DataBase Lab</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/common.js"></script>
 </head>
 <body>
 <?php
@@ -146,7 +147,7 @@
         <span class="error" style="color:brown"><?php echo $dayErr;?></span>
     </div>
     <div class="block">
-        <input type="submit" name="submit" value="Checkout">
+        <input type= "submit" name="submit" value="Checkout" onclick="information()">
     </div>
 </form>
 </div>
@@ -154,25 +155,44 @@
 </body>
 
 </div>
-<div id="sinsert">
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-    订单编号: 
-    <span class="error" style="color:brown"><?php echo $No;?></span>
-    身份证号:
-    <span class="error" style="color:brown"><?php echo $id;?></span>
-    姓名:
-    <span class="error" style="color:brown"><?php echo $name;?></span>
-    房间号: 
-    <span class="error" style="color:brown"><?php echo $OutTime;?></span>
-    员工编号:
-    <span class="error" style="color:brown"><?php echo $employeeid;?></span>
-    价格:
-    <span class="error" style="color:brown"><?php echo $price;?></span>
-    入住时间: 
-    <span class="error" style="color:brown"><?php echo $InTime;?></span>
-    退房时间: 
-    <span class="error" style="color:brown"><?php echo $OutTime;?></span>
-    总金额: 
-    <span class="error" style="color:brown"><?php echo $account;?></span>
-</form>
+<div id='information' style="margin-top: 400px;display:none">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div>
+        <label class="font">订单编号: </label>
+        <span class="error" style="color:brown"><?php echo $No;?></span>
+        </div>
+        <div>
+        <label class="font">身份证号：</label>
+        <span class="error" style="color:brown"><?php echo $id;?></span>
+        </div>
+        <div>
+        <label class="font">姓名：</label>
+        <span class="error" style="color:brown"><?php echo $name;?></span>
+        </div>
+        <div>
+        <label class="font">房间号：</label>
+        <span class="error" style="color:brown"><?php echo $OutTime;?></span>
+        </div>
+        <div>
+        <label class="font">员工编号：</label>
+        <span class="error" style="color:brown"><?php echo $employeeid;?></span>
+        </div>
+        <div>
+        <label class="font">价格：</label>
+        <span class="error" style="color:brown"><?php echo $price;?></span>
+        </div>
+        <div>
+        <label class="font">入住时间: </label>
+        <span class="error" style="color:brown"><?php echo $InTime;?></span>
+        </div>
+        <div>
+        <label class="font">退房时间: </label>
+        <span class="error" style="color:brown"><?php echo $OutTime;?></span>
+        </div>
+        <div>
+        <label class="font">总金额: </label>
+        <span class="error" style="color:brown"><?php echo $account;?></span>
+        </div>
+    </form>
 </div>
+</html>
