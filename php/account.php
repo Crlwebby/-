@@ -125,7 +125,7 @@
 
 <header>
 <div id="sinsert">
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" autocomplete="off">
     <div class="block">
         <label class="font">房间号:</label><input type="text" name="RoomNo">
         <span class="error" style="color:brown"><?php echo $RoomNoErr;?></span>
@@ -146,8 +146,8 @@
         <label class="font">天数:</label><input type="text" name="day">
         <span class="error" style="color:brown"><?php echo $dayErr;?></span>
     </div>
-    <div class="block">
-        <input type= "submit" name="submit" value="Checkout" onclick="information()">
+    <div>
+        <input class="button" type= "submit" name="submit" value="Checkout" onclick="information()">
     </div>
 </form>
 </div>

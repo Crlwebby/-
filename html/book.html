@@ -11,31 +11,30 @@
 <body>
 <!--添加客户入住信息-->
     <h1 class="title">添加客户入住信息</h1>
-    <form name="form1" method="post" action="../php/book.php">
-            <div>
+    <form name="form1" method="post" action="../php/book.php" autocomplete="off">
+            <div class="block">
                 <label class="font">房间号：</label>
                 <input name='number' type='text' autocomplete="off" value='' placeholder="请输入房间号"/>
                 <input type='text' style='display:none'> <!-- 针对firefox -->
             </div>
-            <div>
+            <div class="block">
                 <label class="font">客户姓名：</label>
                 <input name='name' type='text' autocomplete="off" value='' placeholder="请输入客户姓名"/>
                 <input type='text' style='display:none'> <!-- 针对firefox -->
             </div>
-            <div>
+            <div class="block">
                 <label class="font">身份证号：</label>
                 <input name='card' type='text' autocomplete="off" value='' placeholder="请输入身份证号"/>
                 <input type='text' style='display:none'> <!-- 针对firefox -->
             </div>
-            <div>
+            <div class="block">
                 <label class="font">入住时间：</label>
                 <input name='time' type='text' autocomplete="off" value='' placeholder="请选择入住时间"/>
                 <input type='text' style='display:none'> <!-- 针对firefox -->
             </div>
-        <div class="button">
-            <input type="submit" name="Submit" value="添加" >
-            <input type="reset" name="Submit2" value="重置"/>
-            <input type="hidden" name="addnew" value="1" />
+        <div>
+            <input class="button" type="submit" name="Submit" value="添加" >
+            <input class="button" type="reset" name="Submit2" value="重置"/>
         </div>
     </form>
 </body>

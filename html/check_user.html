@@ -12,15 +12,15 @@
 <body>
 <!--注册用户信息列表-->
     <h1 class="title">已有注册信息列表</h1>
-    <form name="form1" method="post" action="../php/check_user_test.php">
-        <div>
+    <form name="form1" method="post" action="../php/check_user_test.php" autocomplete="off">
+        <div class="block">
             <label class="font">房间号：</label><input name="number" type="text" autocomplete="off"  placeholder="房间号" value=""/>
         </div>
-        <div>
+        <div class="block">
             <label class="font">姓名：</label><input name="name" type="text" autocomplete="off" placeholder="姓名" value=""/>
         </div>
-        <div>
-        <input type="submit" name="Submit" value="查找"/>
+        <div class="block">
+        <input class="button" type="submit" name="Submit" value="查找"/>
         </div>
     </form>
 </body>

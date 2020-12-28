@@ -18,19 +18,19 @@
         ?>
         <p style="text-align: center;">共<span><?php echo $rowscount;?></span>条记录</p>
     </div>
-        <table class="table table-bordered table-hover">
-            <tr>
-                <th>房间号</th>
-                <th>状态</th>
+        <table>
+            <tr class="row">
+                <th class="ttitle">房间号</th>
+                <th class="ttitle">状态</th>
             </tr>
             <?php
             while($row = mysqli_fetch_assoc($query)) {
                 $number = $row['房间号'];
                 $status = $row['状态'];
                 ?>
-                <tr>
-                    <td><?php echo $number;;?></td>
-                    <td><?php echo $status;;?></td><br/>
+                <tr class="row">
+                    <td class="tcontent"><?php echo $number;;?></td>
+                    <td class="tcontent"><?php echo $status;;?></td><br/>
                 </tr>
                 <?php
             }

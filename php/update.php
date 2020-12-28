@@ -88,7 +88,7 @@
 
 <header>
 <div id="sinsert">
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" autocomplete="off">
     <div class="block">
         <label class="font">工作编号:</label><input type="text" name="No">
         <span class="error" style="color:brown"><?php echo $NoErr;?></span>
