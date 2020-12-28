@@ -8,13 +8,11 @@ $name=$_POST['name'];
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>用户注册信息列表</title>
+    <link rel="stylesheet" href="../css/page.css">
 </head>
 
 <body class="check_news_body">
 <!--注册用户信息列表-->
-<div class="clearfix admin_con_top">
-    <h2 class="fl">已有注册信息列表</h2>
-</div>
 <?php
 if ($number!=""){
     $sql="select custmerinfo.* from custmerinfo,checkin where custmerinfo.身份证号=checkin.身份证号 and checkin.房间号 = '$number'";
@@ -33,14 +31,15 @@ if($rowscount==0)
     echo '错误：不存在<a href="javascript:history.go(-1);">返回重试<a/>';
 }else{
 ?>
-<table class="table table-bordered table-hover">
-    <tr>
-        <th><input type="checkbox" name="" id="checkall" value="" /></th>
-        <th>身份证号</th>
-        <th>姓名</th>
-        <th>性别</th>
-        <th>电话号</th>
-        <th>服务的员工编号</th>
+<h1 class="title">用户注册信息列表</h1>
+<table>
+    <tr class="row">
+        <th class="ttitle"></th>
+        <th class="ttitle">身份证号</th>
+        <th class="ttitle">姓名</th>
+        <th class="ttitle">性别</th>
+        <th class="ttitle">电话号</th>
+        <th class="ttitle">服务的员工编号</th>
     </tr>
     <?php
     while($row = mysqli_fetch_assoc($query)) {
@@ -50,13 +49,13 @@ if($rowscount==0)
         $tel = $row['电话号'];
         $no = $row['服务的员工编号'];
         ?>
-        <tr>
-            <td><input type="checkbox" name="" id="" value="" class="sel_btn"/></td>
-            <td><?php echo $card;?></td>
-            <td><?php echo $name;?></td>
-            <td><?php echo $gender;?></td>
-            <td><?php echo $tel;?></td>
-            <td><?php echo $no;?></td>
+        <tr class="row">
+            <td class="tcontent"></td>
+            <td class="tcontent"><?php echo $card;?></td>
+            <td class="tcontent"><?php echo $name;?></td>
+            <td class="tcontent"><?php echo $gender;?></td>
+            <td class="tcontent"><?php echo $tel;?></td>
+            <td class="tcontent"><?php echo $no;?></td>
         </tr>
         <?php
     }

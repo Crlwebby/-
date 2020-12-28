@@ -1,19 +1,12 @@
-<?php
-    #客房管理
-    session_start();
-    $id = $pwd = "";
-    if(isset($_SESSION['admin_id'])){
-        $id=$_SESSION['admin_id'];
-        $pwd=$_SESSION['pwd'];
-    }
-?>
 <html>
 <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="../css/page.css">
 </head>
 <body>
+    <h1 class="title">客房修改</h1>
 <?php
+    include 'connect.php';
     $NoErr ="";$KeyErr ="";
     $No=$Key=$RoomNo=$Price=$Status=$Type=$RoomNoErr="";
     $tbool=true;
@@ -55,7 +48,6 @@
     }
 
     if($tbool && $startre){
-        include 'connect.php';
         //修改房间价格
         $sql_query="select 密码 from managerinfo where 工作编号 ='".$No."'";
         $sql=$conn->query($sql_query);

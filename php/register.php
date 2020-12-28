@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    $id = $pwd = "";
-    if(isset($_SESSION['admin_id'])){
-        $id=$_SESSION['admin_id'];
-        $pwd=$_SESSION['pwd'];
-    }
-?>
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -14,6 +6,7 @@
 <body>
 <h1 class="title">顾客登记</h1>
 <?php
+    include 'connect.php';
     $idErr = "";$nameErr ="";$sexErr="";$telephoneErr="";
     $employeeidErr="";
     $id=$name=$sex=$telephone=$employeeid="";
@@ -72,7 +65,6 @@
     }
 
     if($tbool && $startre){
-        include 'connect.php';
         //首先看看是否已经存在顾客信息，如果存在，提示已登记,否则就插入新记录
         $sql_query="select * from custmerinfo where 身份证号 ='".$id."'";
         $sql=$conn->query($sql_query);

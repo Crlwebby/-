@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    $id = $pwd = "";
-    if(isset($_SESSION['admin_id'])){
-        $id=$_SESSION['admin_id'];
-        $pwd=$_SESSION['pwd'];
-    }
-?>
 <html>
 <head>
 	<title>Book Management System For DataBase Lab</title>
@@ -14,7 +6,9 @@
     <script src="../js/common.js"></script>
 </head>
 <body>
+    <h1 class="title">流水统计</h1>
 <?php
+    include 'connect.php';
     $RoomNoErr ="";$idErr ="";$nameErr ="";$OutTimeErr ="";$dayErr ="";
     $RoomNo=$id=$name=$OutTime=$day=$price=$No=$employeeid=$InTime=$account="";
     $num=0;
@@ -74,7 +68,6 @@
     }
 
     if($tbool && $startre){
-        include 'connect.php';
         //首先看看是否已经存在顾客信息，如果存在，提示已登记,否则就插入新记录
         $sql_query="select * from checkout where 身份证号 ='".$id."'";
         $sql=$conn->query($sql_query);
@@ -85,7 +78,6 @@
             $sql_query2="insert into checkout values('".$RoomNo."','".$id."','".$name."',
             '".$OutTime."','".$day."')";
             $conn->query($sql_query2);
-            var_dump($sql_query2);
             $num=$num+1;
             $No=strval($num);
             //查询入住时间
@@ -103,14 +95,18 @@
             $sql3=$conn->query($sql_query5);
             $info3=mysqli_fetch_assoc($sql3);
             $price=$info3["价格"];
+            //删除记录
+            $sql_query6="delete from checkin where 房间号='".$RoomNo."'";
+            $conn->query($sql_query6);
+            //改变客房状态
+            $sql_query7="update roomstatus set 状态='未入住' where 房间号='".$RoomNo."'";
+            $conn->query($sql_query7);
             //将所有信息插入订单
             $account=strval(intval($price)*intval($day));
-            var_dump($account);
 
             $sql_query1="insert into orderinfo values('".$No."','".$id."','".$name."','".$RoomNo."',
             '".$employeeid."','".$price."','".$InTime."','".$OutTime."','".$account."')";
             $conn->query($sql_query1);
-            var_dump($sql_query1);
         }
     }
 
@@ -139,7 +135,7 @@
         <span class="error" style="color:brown"><?php echo $nameErr;?></span>
     </div>
     <div class="block">
-        <label class="font">退房时间:</label><input type="text" name="OutTime">
+        <label class="font">退房时间:</label><input type="date" name="OutTime">
         <span class="error" style="color:brown"><?php echo $OutTimeErr;?></span>
     </div>
     <div class="block">
@@ -155,7 +151,7 @@
 </body>
 
 </div>
-<div id='information' style="margin-top: 400px;display:none">
+<div id='information' style="margin-top: 400px">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div>
         <label class="font">订单编号: </label>
@@ -171,7 +167,7 @@
         </div>
         <div>
         <label class="font">房间号：</label>
-        <span class="error" style="color:brown"><?php echo $OutTime;?></span>
+        <span class="error" style="color:brown"><?php echo $RoomNo;?></span>
         </div>
         <div>
         <label class="font">员工编号：</label>

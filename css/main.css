@@ -139,16 +139,44 @@
 }
 .quit {
     display: none; /* 默认隐藏 */
-    position: fixed; 
     z-index: 19891017; 
-    padding-top: 100px; 
-    left: 689px;
-    top: 129.5px;
-    width: 226; 
-    height: 158; 
+    border:1px solid #000;
     overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(255,255,255); 
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    border-radius: 20px;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
 #mountNode{

@@ -1,6 +1,6 @@
 body{
     font-family: "Microsoft Yahei",sans-serif;
-    background-color: #B2E3AF;
+    /*background-color: #B2E3AF;*/
 }
 
 .title{
@@ -24,13 +24,13 @@ body{
     margin-top: 10px;
 }
 
-form{
+/*form{
     background-color:rgba(55,175,152,0.5);
-}
+}*/
 input{
     width: 320px;
     height: 30px;
-    outline-color: invert ;
+    /*outline-color: invert ;
 	outline-style: none ;
 	outline-width: 0px ;
 	border: none ;
@@ -39,7 +39,7 @@ input{
 	-webkit-appearance: none ;
 	-webkit-user-select: text ;
 	outline-color: transparent ;
-	box-shadow: none;
+	box-shadow: none;*/
 
 }
 

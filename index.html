@@ -11,7 +11,7 @@
 <body>
 <!--上方标题栏-->
 <?php
-    /*session_start(); 
+    session_start(); 
 
     //检测是否登录，若没登录则转向登录界面 
 
@@ -21,7 +21,7 @@
 
         exit(); 
 
-    }*/
+    }
 ?>
 <div class="parentTop">
     <a class="appName">宾馆管理系统后台</a>
@@ -80,14 +80,14 @@
         </form>
     </div>
 </div>
-<div class="quit" id="quit">
-    <div  style="cursor: move;">信息</div>
+<div class="quit" id="quit" style="padding-top: 0px;">
+    <div  style="cursor: move;"><strong>信息</strong></div>
     <div>
         <div style="padding: 20px;">是否退出</div>
     </div>
     <div>
-        <input type="button" value="确定退出" onclick="window.location.href='./php/quit.php'">
-        <input type="button" value="暂不退出" onclick="(function(){document.getElementById('quit').style.display='none'})()">
+        <input class="myButton" type="button" value="确定退出" onclick="window.location.href='./php/quit.php'">
+        <input class="myButton" type="button" value="暂不退出" onclick="(function(){document.getElementById('quit').style.display='none'})()">
     </div>
 </div>
 </body>
